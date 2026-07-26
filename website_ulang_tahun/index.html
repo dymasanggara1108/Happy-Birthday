@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#8f3559" />
+  <meta name="description" content="Sebuah ucapan ulang tahun interaktif yang dibuat dengan cinta." />
+  <title>Selamat Ulang Tahun ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <main id="app">
+    <!-- 1. Amplop -->
+    <section id="intro" class="scene active" aria-labelledby="intro-title">
+      <div class="intro-copy">
+        <p class="eyebrow">Ada sesuatu untukmu</p>
+        <h1 id="intro-title">Sebuah surat kecil</h1>
+        <p>Ketuk amplopnya, ya.</p>
+      </div>
+
+      <button id="envelopeButton" class="envelope-button" aria-label="Buka surat ulang tahun">
+        <span class="envelope">
+          <span class="envelope-back"></span>
+          <span class="paper-preview">
+            <span>Untuk seseorang yang istimewa</span>
+          </span>
+          <span class="envelope-front"></span>
+          <span class="envelope-flap"></span>
+          <span class="wax-seal">❤</span>
+        </span>
+      </button>
+
+      <span class="tap-hint">Klik untuk membuka</span>
+    </section>
+
+    <!-- 2. Surat -->
+    <section id="letter" class="scene paper-scene" aria-labelledby="letter-title">
+      <article class="letter-card">
+        <div class="letter-decoration">✦</div>
+        <p class="letter-date" id="todayText"></p>
+        <h2 id="letter-title">Selamat Ulang Tahun, <span data-recipient>Sayang</span>!</h2>
+
+        <div class="letter-body">
+          <p>
+            Hari ini adalah pengingat bahwa dunia pernah mendapatkan satu hadiah yang sangat indah:
+            kehadiranmu.
+          </p>
+          <p>
+            Terima kasih sudah menjadi seseorang yang membawa banyak warna, tawa, dan cerita baik.
+            Semoga langkahmu selalu ditemani hal-hal yang lembut, orang-orang yang tulus, dan keberanian
+            untuk mengejar semua yang kamu impikan.
+          </p>
+          <p>
+            Mungkin aku tidak selalu pandai merangkai kata, tetapi satu hal yang ingin selalu kamu ingat:
+            kamu berharga, kamu dicintai, dan keberadaanmu sangat berarti.
+          </p>
+          <p>
+            Selamat bertambah usia. Semoga tahun ini lebih hangat, lebih tenang, dan lebih membahagiakan
+            daripada tahun-tahun sebelumnya.
+          </p>
+        </div>
+
+        <p class="signature">
+          Dengan sepenuh hati,<br />
+          <span data-sender>Aku</span> ♡
+        </p>
+
+        <button class="primary-button" data-next="album">
+          Buka album kenangan
+          <span aria-hidden="true">→</span>
+        </button>
+      </article>
+    </section>
+
+    <!-- 3. Album -->
+    <section id="album" class="scene album-scene" aria-labelledby="album-title">
+      <div class="section-heading">
+        <p class="eyebrow">Kita dalam bingkai waktu</p>
+        <h2 id="album-title">Album Kenangan</h2>
+        <p>Beberapa momen yang layak disimpan selamanya.</p>
+      </div>
+
+      <div class="album-book">
+        <div class="book-spine" aria-hidden="true"></div>
+
+        <div class="album-page left-page">
+          <figure class="polaroid rotate-left">
+            <img src="assets/photos/photo1.png" alt="Foto kenangan pertama" />
+            <figcaption>Hari yang sederhana, tetapi membekas.</figcaption>
+          </figure>
+          <figure class="polaroid rotate-right">
+            <img src="assets/photos/photo2.png" alt="Foto kenangan kedua" />
+            <figcaption>Tawa yang tidak pernah membosankan.</figcaption>
+          </figure>
+          <figure class="polaroid rotate-left">
+            <img src="assets/photos/photo3.png" alt="Foto kenangan ketiga" />
+            <figcaption>Tempat terbaik adalah di dekatmu.</figcaption>
+          </figure>
+          <figure class="polaroid rotate-right">
+            <img src="assets/photos/photo4.png" alt="Foto kenangan keempat" />
+            <figcaption>Untuk cerita yang selalu ingin diulang.</figcaption>
+          </figure>
+        </div>
+
+        <div class="album-page right-page">
+          <figure class="polaroid rotate-right">
+            <img src="assets/photos/photo5.png" alt="Foto kenangan kelima" />
+            <figcaption>Satu foto, seribu rasa.</figcaption>
+          </figure>
+          <figure class="polaroid rotate-left">
+            <img src="assets/photos/photo6.png" alt="Foto kenangan keenam" />
+            <figcaption>Bahagia ternyata sesederhana ini.</figcaption>
+          </figure>
+          <figure class="polaroid rotate-right">
+            <img src="assets/photos/photo7.png" alt="Foto kenangan ketujuh" />
+            <figcaption>Terima kasih untuk setiap momen.</figcaption>
+          </figure>
+          <figure class="polaroid rotate-left">
+            <img src="assets/photos/photo8.png" alt="Foto kenangan kedelapan" />
+            <figcaption>Semoga masih banyak halaman berikutnya.</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <button class="primary-button" data-next="cake">
+        Ada kejutan berikutnya
+        <span aria-hidden="true">→</span>
+      </button>
+    </section>
+
+    <!-- 4. Kue -->
+    <section id="cake" class="scene cake-scene" aria-labelledby="cake-title">
+      <div class="section-heading">
+        <p class="eyebrow">Saatnya membuat permintaan</p>
+        <h2 id="cake-title">Tiup lilinnya</h2>
+        <p>Klik kuenya untuk mematikan semua lilin.</p>
+      </div>
+
+      <button id="cakeButton" class="cake-button" aria-label="Klik kue untuk mematikan lilin">
+        <span class="cake">
+          <span class="plate"></span>
+          <span class="cake-layer cake-bottom"></span>
+          <span class="cake-layer cake-middle"></span>
+          <span class="cake-layer cake-top"></span>
+          <span class="icing"></span>
+          <span class="sprinkle s1"></span>
+          <span class="sprinkle s2"></span>
+          <span class="sprinkle s3"></span>
+          <span class="sprinkle s4"></span>
+          <span class="sprinkle s5"></span>
+
+          <span class="candle c1"><span class="wick"></span><span class="flame"></span></span>
+          <span class="candle c2"><span class="wick"></span><span class="flame"></span></span>
+          <span class="candle c3"><span class="wick"></span><span class="flame"></span></span>
+          <span class="candle c4"><span class="wick"></span><span class="flame"></span></span>
+          <span class="candle c5"><span class="wick"></span><span class="flame"></span></span>
+        </span>
+      </button>
+
+      <p id="cakeStatus" class="cake-status" aria-live="polite">Semua lilin masih menyala ✨</p>
+    </section>
+
+    <!-- Modal permintaan -->
+    <div id="wishModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="wish-title" hidden>
+      <div class="modal-backdrop"></div>
+      <div class="wish-card">
+        <span class="wish-stars" aria-hidden="true">✦ ✧ ✦</span>
+        <h2 id="wish-title">Sekarang, buat permintaanmu</h2>
+        <p>Tutup mata sebentar dan simpan satu harapan terbaik di dalam hati.</p>
+        <label for="wishInput">Boleh ditulis di sini, atau cukup disimpan dalam hati.</label>
+        <textarea id="wishInput" rows="3" placeholder="Permintaanku adalah..."></textarea>
+        <button id="saveWishButton" class="primary-button">Permintaanku sudah selesai</button>
+      </div>
+    </div>
+
+    <!-- 5. Penutup + Lagu -->
+    <section id="finale" class="scene finale-scene" aria-labelledby="finale-title">
+      <div id="confetti" class="confetti-layer" aria-hidden="true"></div>
+
+      <div class="finale-content">
+        <p class="eyebrow">Satu lagu untuk menemani kenangan ini</p>
+        <h2 id="finale-title">Semoga permintaanmu menjadi nyata</h2>
+        <p id="savedWishText" class="saved-wish"></p>
+
+        <div class="music-card">
+          <div class="record" aria-hidden="true">
+            <div class="record-label">♡</div>
+          </div>
+          <div>
+            <span class="now-playing">Now playing</span>
+            <strong>Shape of My Heart</strong>
+            <span>Tambahkan file musik milikmu pada folder assets/music</span>
+          </div>
+          <button id="musicToggle" class="icon-button" aria-label="Putar atau jeda musik">▶</button>
+        </div>
+
+        <audio id="birthdaySong" loop preload="metadata">
+          <source src="assets/music/Shape of My Heart.mp3" type="audio/mpeg" />
+        </audio>
+
+        <div class="slideshow" aria-label="Slideshow foto kenangan">
+          <div class="slides-track">
+            <figure class="memory-slide active">
+              <img src="assets/photos/photo1.png" alt="Kenangan manis pertama" />
+              <figcaption>Terima kasih sudah hadir di hidupku.</figcaption>
+            </figure>
+            <figure class="memory-slide">
+              <img src="assets/photos/photo2.png" alt="Kenangan manis kedua" />
+              <figcaption>Terima kasih untuk tawa yang selalu tulus.</figcaption>
+            </figure>
+            <figure class="memory-slide">
+              <img src="assets/photos/photo3.png" alt="Kenangan manis ketiga" />
+              <figcaption>Semoga kita terus membuat cerita baik.</figcaption>
+            </figure>
+            <figure class="memory-slide">
+              <img src="assets/photos/photo4.png" alt="Kenangan manis keempat" />
+              <figcaption>Hari ini, besok, dan seterusnya.</figcaption>
+            </figure>
+            <figure class="memory-slide">
+              <img src="assets/photos/photo5.png" alt="Kenangan manis kelima" />
+              <figcaption>Selamat ulang tahun, manusia kesayanganku.</figcaption>
+            </figure>
+            <figure class="memory-slide">
+              <img src="assets/photos/photo6.png" alt="Kenangan manis keenam" />
+              <figcaption>Semoga bahagiamu selalu menemukan jalan pulang.</figcaption>
+            </figure>
+          </div>
+          <div id="slideDots" class="slide-dots" aria-label="Navigasi slideshow"></div>
+        </div>
+
+        <div class="closing-note">
+          <span>Terima kasih sudah membuka semuanya.</span>
+          <strong>Selamat ulang tahun, <span data-recipient>Sayang</span>! ♡</strong>
+        </div>
+
+        <button id="restartButton" class="secondary-button">Ulangi dari awal</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
